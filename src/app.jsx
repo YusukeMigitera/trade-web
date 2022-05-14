@@ -1,10 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Hello from "./Hello";
-import Page1 from "./pages/Page1";
-import Page2 from "./pages/Page2";
-import Page3 from "./pages/Page3";
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Hello from './Hello';
+import Page1 from './pages/Page1';
+import Page2 from './pages/Page2';
+import Page3 from './pages/Page3';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -17,5 +17,5 @@ ReactDOM.render(
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById("app")
+  document.getElementById('app'),
 );
