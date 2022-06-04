@@ -6,6 +6,7 @@ module.exports = {
   entry: path.resolve(__dirname, 'src/app.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
     filename: 'app.js',
   },
   resolve: {
@@ -32,7 +33,11 @@ module.exports = {
       template: path.resolve(__dirname, 'src/index.html'),
     }),
   ],
+  watchOptions: {
+    poll: true,
+  },
   devServer: {
+    hot: true,
     static: {
       directory: path.join(__dirname, 'dist'),
     },
