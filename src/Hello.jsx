@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const n = 2;
 const Hello = () => (
   <main>
-    <h1>ハッカーと画家{n}</h1>
+    <h1>ハッカーと画家</h1>
     <Link to="page1">
       <h2>どうしてオタクはモテないか</h2>
     </Link>
