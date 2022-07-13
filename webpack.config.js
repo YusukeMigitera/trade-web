@@ -2,21 +2,21 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
-  entry: path.resolve(__dirname, 'src/app.js'),
+  mode: "development",
+  entry: path.resolve(__dirname, "src/app.tsx"),
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
     filename: 'app.js',
   },
   resolve: {
-    modules: [path.resolve(__dirname, 'node_modules')],
-    extensions: ['.js', '.jsx'],
+    modules: [path.resolve(__dirname, "node_modules")],
+    extensions: [".tsx", ".ts", ".js", ".jsx"],
   },
   module: {
     rules: [
       {
-        test: [/\.js$/, /\.jsx$/],
+        test: [/\.ts$/, /\.tsx$/],
         use: [
           {
             loader: 'babel-loader',
@@ -24,6 +24,7 @@ module.exports = {
               presets: ['@babel/preset-env', '@babel/preset-react'],
             },
           },
+          "ts-loader",
         ],
       },
     ],
@@ -39,7 +40,7 @@ module.exports = {
   devServer: {
     hot: true,
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname, "dist"),
     },
   },
 };
